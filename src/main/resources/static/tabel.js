@@ -4,6 +4,7 @@ $(function () {
 })
 function hentMotorvogn() {
     $.get("henteMotorvogn",function (motorvogner) {
+        console.log(motorvogner)
         formatMotorvogn(motorvogner);
     })
 }
@@ -13,9 +14,7 @@ function formatMotorvogn(motorvogner) {
     for (const motorvogn of motorvogner) {
 
         ut+="<tr><td>"+motorvogn.personnr+"</td><td>"+motorvogn.navn+"</td><td>"+motorvogn.adresse+
-            "</td><td>"+motorvogn.kjennetegn+"</td><td>"+motorvogn.merke+"</td><td>"+motorvogn.type+"</td>"+
-            "<td> <button class='btn btn-primary' onclick='endreBiletID("+bilet.id+")'>Endre</button></td>"+
-            "<td> <button class='btn btn-danger' onclick='slettbilettet("+bilet.id+")'>Slett</button></td></tr>";
+            "</td><td>"+motorvogn.kjennetegn+"</td><td>"+motorvogn.merke+"</td><td>"+motorvogn.type+"</td></tr>";
     }
     ut+="</tbody>"
     $("#tabel").html(ut);

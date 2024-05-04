@@ -10,6 +10,7 @@ function hentBiler() {
 }
 function formatBiler(bils) {
     let ut = "<select class='form-select' id='valgtMerke' onchange='finnType()'>";
+    ut+="<option>Velg Merke</option>"
     let lastMerke=""
     for (const bil of bils) {
         if(bil.merke!==lastMerke){
@@ -45,9 +46,10 @@ function registrerBilet() {
         navn:$("#navn").val(),
         adresse:$("#adresse").val(),
         kjennetegn:$("#kjennetegn").val(),
-        merke:$("#merke").val(),
-        type:$("#type").val()
+        merke:$("#valgtMerke").val(),
+        type:$("#valgtType").val()
     }
+    console.log(motorvogn)
     $.post("lagreMotorvogn",motorvogn,function () {
         window.location.href="tabel.html";
     })
