@@ -8,39 +8,39 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<div class="container mt-4">
+<div class="container mt-4 ">
     <h3>Motorvong</h3>
     <div class="row">
         <div class="col-lg-4">
             <form action="/action_page.php">
                 <div class="mb-3">
-                    <label for="personNr" class="form-label">PersonNr : </label>
-                    <input  id="personNr" type="text" onchange="sjekkePersonNr">
+                    <label for="personNr" class="form-label">PersonNr</label>
+                    <input  id="personNr" type="text" onchange="sjekkePersonNr()" class="form-control">
                     <span id="feilPersonNr" style="color: red"></span>
                 </div>
                 <div class="mb-3">
-                    <label for="navn">Navn : </label>
-                    <input  id="navn" type="text" onchange="sjekkeNavn">
+                    <label for="navn" class="form-label">Navn</label>
+                    <input  id="navn" type="text" onchange="sjekkeNavn()" class="form-control">
                     <span id="feilNavn" style="color: red"></span>
                 </div>
                 <div class="mb-3">
-                    <label for="adresse">Adresse : </label>
-                    <input  id="adresse" type="text" onchange="sjekkeAdresse">
+                    <label for="adresse" class="form-label">Adresse</label>
+                    <input  id="adresse" type="text" onchange="sjekkeAdresse()" class="form-control">
                     <span id="feilAdresse" style="color: red"></span>
                 </div>
                 <div class="mb-3">
-                    <label for="kjennetegn">Kjennetegn : </label>
-                    <input  id="kjennetegn" type="text" onchange="sjekkeKjennetegn">
+                    <label for="kjennetegn" class="form-label">Kjennetegn</label>
+                    <input  id="kjennetegn" type="text" onchange="sjekkeKjennetegn()" class="form-control">
                     <span id="feilKjennetegn" style="color: red"></span>
                 </div>
                 <div class="mb-3">
-                    <label for="merke">Merke : </label>
+                    <label for="merke" class="form-label">Merke</label>
                     <div id="merke" class="dropdown">
 
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="type">Type : </label>
+                    <label for="type" class="form-label">Type </label>
                     <div id="type" class="dropdown"></div>
                 </div>
             </form>
@@ -49,13 +49,7 @@
     </div>
 </div>
 
-        <div class="container-fluid">
-            <div class="col-lg-8">
-                <h3>Alle Bilene</h3>
-                <table class="table table-hover" id="tabel"></table>
-                <button type="button" class="btn btn-danger" onclick="sletAlleBiletter()">Slett Alle Biletter</button>
-            </div>
-        </div>
+
 
 
 

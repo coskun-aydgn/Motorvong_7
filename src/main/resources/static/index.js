@@ -39,3 +39,17 @@ function formatType(bils, valtmerke){
     ut+="</select>";
     $("#type").html(ut);
 }
+function registrerBilet() {
+    let motorvogn={
+        personnr:$("#personNr").val(),
+        navn:$("#navn").val(),
+        adresse:$("#adresse").val(),
+        kjennetegn:$("#kjennetegn").val(),
+        merke:$("#merke").val(),
+        type:$("#type").val()
+    }
+    $.post("lagreMotorvogn",motorvogn,function () {
+        window.location.href="tabel.html";
+    })
+
+}
